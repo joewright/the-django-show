@@ -65,7 +65,9 @@ ROOT_URLCONF = "showsite.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            # BASE_DIR / "templates", # include admin template overrides
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

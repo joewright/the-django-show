@@ -1,0 +1,29 @@
+{% comment %}
+copypasta via https://github.com/django/django/blob/main/django/contrib/admin/templates/admin/app_list.html
+{% endcomment %}
+<div class="app-jw-custom module{% if "my-url" in request.path|urlencode %} current-app{% endif %}">
+      <table>
+        <caption>
+          <a href="" class="section">Custom stuff</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Extra Stuff</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+            
+            <tr class="model-custom{% if "my-url" in request.path|urlencode %} current-model{% endif %}">
+              <th scope="row" id="custom-stuff">
+                  <a href="/admin/my-url"{% if "my-url" in request.path|urlencode %} aria-current="page"{% endif %}>Highly customizable</a>
+              </th>
+
+              <td></td>
+              <td></td>
+            </tr>
+
+        </tbody>
+      </table>
+</div>

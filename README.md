@@ -1,6 +1,11 @@
 # the-django-show
 Tutorial app for customizing the Django admin
 
+This covers
+- basic model admin usage
+- a model admin custom endpoint example
+- a custom admin page example
+
 ## Requirements
 
 - python >= 3.14
@@ -21,3 +26,7 @@ python showsite/manage.py import-data
 # run a local web server at localhost:8000
 python showsite/manage.py runserver
 ```
+
+## Links
+- Django Admin source - https://github.com/django/django/tree/main/django/contrib/admin/templates/admin
+- Django Getting started - https://www.djangoproject.com/start/

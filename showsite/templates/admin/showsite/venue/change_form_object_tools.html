@@ -1,0 +1,14 @@
+{% comment %}
+https://github.com/django/django/blob/main/django/contrib/admin/templates/admin/change_form_object_tools.html
+{% endcomment %}
+{% load i18n admin_urls %}
+{% block object-tools-items %}
+<li>
+    {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
+    <a href="{% add_preserved_filters history_url %}" class="historylink">{% translate "History" %}</a>
+</li>
+<li>
+    <a href="/admin/showsite/show?venue__name__exact={{ original.name }}" class="changelink">{% translate "Shows at this venue" %}</a>
+</li>
+{% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% translate "View on site" %}</a></li>{% endif %}
+{% endblock %}

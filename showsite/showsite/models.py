@@ -1,3 +1,4 @@
+import json
 import re
 
 from django.db.models import (
@@ -26,3 +27,13 @@ class Show(Model):
     headliner = CharField(blank=False)
     support = CharField(blank=False)
     day = DateField(blank=False)
+
+    def to_json(self):
+        return json.dumps(
+            {
+                "venue": self.venue.name,
+                "headliner": self.headliner,
+                "support": self.support,
+                "day": self.day.isoformat(),
+            }
+        )
